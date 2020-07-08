@@ -1,5 +1,6 @@
 package com.startup.covid19tracker.networking
 
+import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -13,6 +14,7 @@ object RetrofitClient {
     private val logger = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
     }
+
 
     private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor(logger)

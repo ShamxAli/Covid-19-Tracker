@@ -1,38 +1,9 @@
-package com.startup.covid19tracker.models
+import com.google.gson.annotations.SerializedName
 
-// https:corona.lmao.ninja/v3/covid-19/countries/
 
 data class Countries(
-    val active: Int,
-    val activePerOneMillion: Double,
-    val cases: Int,
-    val casesPerOneMillion: Int,
-    val continent: String,
-    val country: String,
-    val countryInfo: CountryInfo,
-    val critical: Int,
-    val criticalPerOneMillion: Double,
-    val deaths: Int,
-    val deathsPerOneMillion: Int,
-    val oneCasePerPeople: Int,
-    val oneDeathPerPeople: Int,
-    val oneTestPerPeople: Int,
-    val population: Int,
-    val recovered: Int,
-    val recoveredPerOneMillion: Double,
-    val tests: Int,
-    val testsPerOneMillion: Int,
-    val todayCases: Int,
-    val todayDeaths: Int,
-    val todayRecovered: Int,
-    val updated: Long
-) {
-    data class CountryInfo(
-        val _id: Int,
-        val flag: String,
-        val iso2: String,
-        val iso3: String,
-        val lat: Int,
-        val long: Int
-    )
-}
+
+    @SerializedName("country") val country: String,
+    @SerializedName("cases") val cases: Int,
+    @SerializedName("countryInfo") val countryInfo: CountryInfo
+)

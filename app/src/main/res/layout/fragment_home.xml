@@ -136,7 +136,6 @@
                 android:alignmentMode="alignMargins"
                 android:columnCount="2"
                 android:rowCount="2"
-
                 android:padding="16dp"
                 tools:ignore="UselessParent">
 
