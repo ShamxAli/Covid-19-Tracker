@@ -136,6 +136,8 @@
                 android:alignmentMode="alignMargins"
                 android:columnCount="2"
                 android:rowCount="2"
+
+                android:padding="16dp"
                 tools:ignore="UselessParent">
 
                 <androidx.cardview.widget.CardView
@@ -162,12 +164,12 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="25dp"
                             android:gravity="center"
-                            android:text="Confirmed"
+                            android:text="Corona Virus Cases"
                             android:textColor="@color/yellow"
                             android:textSize="16sp" />
 
                         <TextView
-                            android:id="@+id/activity_main_confirmed_textview"
+                            android:id="@+id/w_totalCases"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
@@ -176,15 +178,6 @@
                             android:textColor="@android:color/black"
                             android:textSize="24sp" />
 
-                        <TextView
-                            android:id="@+id/activity_main_confirmed_new_textview"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="25dp"
-                            android:gravity="center"
-                            android:text="+2,333"
-                            android:textColor="@color/yellow"
-                            android:textSize="16sp" />
 
                     </LinearLayout>
 
@@ -218,7 +211,7 @@
                             android:textSize="16sp" />
 
                         <TextView
-                            android:id="@+id/activity_main_active_textview"
+                            android:id="@+id/w_totalActiveCases"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
@@ -227,15 +220,6 @@
                             android:textColor="@android:color/black"
                             android:textSize="24sp" />
 
-                        <TextView
-                            android:id="@+id/activity_main_active_new_textview"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="25dp"
-                            android:gravity="center"
-                            android:text="+2,333"
-                            android:textColor="@color/blue"
-                            android:textSize="16sp" />
 
                     </LinearLayout>
 
@@ -270,7 +254,7 @@
                             android:textSize="16sp" />
 
                         <TextView
-                            android:id="@+id/activity_main_recovered_textview"
+                            android:id="@+id/w_totalRecoveredCases"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
@@ -279,15 +263,6 @@
                             android:textColor="@android:color/black"
                             android:textSize="24sp" />
 
-                        <TextView
-                            android:id="@+id/activity_main_recovered_new_textview"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="25dp"
-                            android:gravity="center"
-                            android:text="+2,333"
-                            android:textColor="@color/green"
-                            android:textSize="16sp" />
 
                     </LinearLayout>
 
@@ -321,7 +296,7 @@
                             android:textSize="16sp" />
 
                         <TextView
-                            android:id="@+id/activity_main_death_textview"
+                            android:id="@+id/w_totalDeaths"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
@@ -330,15 +305,6 @@
                             android:textColor="@android:color/black"
                             android:textSize="24sp" />
 
-                        <TextView
-                            android:id="@+id/activity_main_death_new_textview"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="25dp"
-                            android:gravity="center"
-                            android:text="+2,333"
-                            android:textColor="@color/red"
-                            android:textSize="16sp" />
 
                     </LinearLayout>
 
@@ -351,7 +317,7 @@
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="4dp"
                     android:layout_marginRight="8dp"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="4dp">
@@ -368,12 +334,12 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="25dp"
                             android:gravity="center"
-                            android:text="Samples Tested"
+                            android:text="Critical"
                             android:textColor="@color/pink"
                             android:textSize="16sp" />
 
                         <TextView
-                            android:id="@+id/activity_main_samples_textview"
+                            android:id="@+id/w_totalCritical"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
@@ -381,16 +347,6 @@
                             android:text="234,333"
                             android:textColor="@android:color/black"
                             android:textSize="24sp" />
-
-                        <TextView
-                            android:id="@+id/activity_main_samples_new_textview"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="25dp"
-                            android:gravity="center"
-                            android:text="+2,333"
-                            android:textColor="@color/pink"
-                            android:textSize="16sp" />
 
                     </LinearLayout>
 
@@ -419,29 +375,20 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="25dp"
                             android:gravity="center"
-                            android:text="Deaths"
+                            android:text="Today's Cases"
                             android:textColor="@color/orange"
                             android:textSize="16sp" />
 
                         <TextView
-                            android:id="@+id/activity_main_time_textview"
+                            android:id="@+id/w_totalTodayCases"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="07:00 PM"
+                            android:text="234,333"
                             android:textColor="@android:color/black"
                             android:textSize="24sp" />
 
-                        <TextView
-                            android:id="@+id/activity_main_date_textview"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="25dp"
-                            android:gravity="center"
-                            android:text="15 June 2020"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
 
                     </LinearLayout>
 
