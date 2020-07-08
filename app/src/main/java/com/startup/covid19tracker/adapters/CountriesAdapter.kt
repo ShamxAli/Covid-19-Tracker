@@ -10,6 +10,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.startup.covid19tracker.R
+import java.text.NumberFormat
+import java.util.*
 
 
 class CountriesAdapter(val context: Context, val list: List<Countries>) :
@@ -29,8 +31,9 @@ class CountriesAdapter(val context: Context, val list: List<Countries>) :
         val countries = list[position]
 
         holder.countryName.text = countries.country
-        holder.numberOfCases.text = countries.cases.toString()
         Glide.with(context).load(countries.countryInfo.flag).into(holder.countryFlag)
+        holder.numberOfCases.text =
+            NumberFormat.getNumberInstance(Locale.getDefault()).format(countries.cases)
 
     }
 
@@ -45,6 +48,4 @@ class CountriesAdapter(val context: Context, val list: List<Countries>) :
         val countryName = itemView.findViewById<TextView>(R.id.country_name)
         val numberOfCases = itemView.findViewById<TextView>(R.id.num_of_cases)
     }
-
-
 }

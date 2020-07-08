@@ -48,15 +48,21 @@ class CountriesFragment : Fragment() {
                 if (response.isSuccessful) {
                     val countriesList = response.body()
 
-                    val layoutManager = LinearLayoutManager(requireContext())
-                    layoutManager.orientation = LinearLayoutManager.VERTICAL
-                    recyclerView.layoutManager = layoutManager
+                    try {
+                        val layoutManager = LinearLayoutManager(requireContext())
+                        layoutManager.orientation = LinearLayoutManager.VERTICAL
+                        recyclerView.layoutManager = layoutManager
 
-                    // sorting the list
-                    val sortedList = countriesList?.sortedWith(compareByDescending({ it.cases }))
+                        // sorting the list
+                        val sortedList =
+                            countriesList?.sortedWith(compareByDescending({ it.cases }))
+                        recyclerView.adapter =
+                            sortedList?.let { CountriesAdapter(requireContext(), sortedList) }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
 
-                    recyclerView.adapter =
-                        sortedList?.let { CountriesAdapter(requireContext(), sortedList) }
+
                 }
             }
 

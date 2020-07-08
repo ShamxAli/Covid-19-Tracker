@@ -17,6 +17,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.text.NumberFormat
+import java.util.*
 
 
 class HomeFragment : Fragment() {
@@ -50,12 +51,25 @@ class HomeFragment : Fragment() {
 
                     wholeWorld?.let {
                         try {
-                            w_totalCases.text = wholeWorld.cases.toString()
-                            w_totalActiveCases.text = wholeWorld.active.toString()
-                            w_totalRecoveredCases.text = wholeWorld.recovered.toString()
-                            w_totalDeaths.text = wholeWorld.deaths.toString()
-                            w_totalCritical.text = wholeWorld.critical.toString()
-                            w_totalTodayCases.text = wholeWorld.todayCases.toString()
+
+                            w_totalCases.text =
+                                NumberFormat.getNumberInstance(Locale.getDefault())
+                                    .format(wholeWorld.cases)
+                            w_totalActiveCases.text =
+                                NumberFormat.getNumberInstance(Locale.getDefault())
+                                    .format(wholeWorld.active)
+                            w_totalRecoveredCases.text =
+                                NumberFormat.getNumberInstance(Locale.getDefault())
+                                    .format(wholeWorld.recovered)
+                            w_totalDeaths.text =
+                                NumberFormat.getNumberInstance(Locale.getDefault())
+                                    .format(wholeWorld.deaths)
+                            w_totalCritical.text =
+                                NumberFormat.getNumberInstance(Locale.getDefault())
+                                    .format(wholeWorld.critical)
+                            w_totalTodayCases.text =
+                                NumberFormat.getNumberInstance(Locale.getDefault())
+                                    .format(wholeWorld.todayCases)
 
 
                             /* ========  Pie Chart =========*/
