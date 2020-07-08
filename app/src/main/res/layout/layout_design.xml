@@ -17,12 +17,24 @@
 
         >
 
+        <TextView
+            android:id="@+id/country_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:text="0"
+            android:textSize="16sp" />
+
+        />
+
         <ImageView
             android:id="@+id/country_flag"
             android:layout_width="45dp"
             android:layout_height="25dp"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="4dp"
+            android:layout_toRightOf="@id/country_rank"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_background" />
 

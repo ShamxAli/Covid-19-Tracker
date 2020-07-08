@@ -10,7 +10,7 @@ import com.startup.covid19tracker.models.Pakistan
 import com.startup.covid19tracker.networking.CovidAPI
 import com.startup.covid19tracker.networking.RetrofitClient
 import com.startup.covid19tracker.utils.showToast
-import kotlinx.android.synthetic.main.fragment_f_a_qs.*
+import kotlinx.android.synthetic.main.fragment_pak.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,7 +19,7 @@ import java.text.NumberFormat
 import java.util.*
 
 
-class FAQsFragment : Fragment() {
+class PakFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +32,7 @@ class FAQsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_f_a_qs, container, false)
+        return inflater.inflate(R.layout.fragment_pak, container, false)
     }
 
 

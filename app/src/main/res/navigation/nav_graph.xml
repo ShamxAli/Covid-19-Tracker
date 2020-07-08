@@ -21,11 +21,11 @@
         tools:layout="@layout/fragment_countries" >
         <action
             android:id="@+id/action_countriesFragment_to_FAQsFragment"
-            app:destination="@id/FAQsFragment" />
+            app:destination="@id/PakFragment" />
     </fragment>
     <fragment
-        android:id="@+id/FAQsFragment"
-        android:name="com.startup.covid19tracker.fragments.FAQsFragment"
+        android:id="@+id/PakFragment"
+        android:name="com.startup.covid19tracker.fragments.PakFragment"
         android:label="fragment_f_a_qs"
-        tools:layout="@layout/fragment_f_a_qs" />
+        tools:layout="@layout/fragment_pak" />
 </navigation>

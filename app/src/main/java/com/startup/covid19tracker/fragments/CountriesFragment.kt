@@ -17,8 +17,13 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
+import kotlin.collections.ArrayList
 
 class CountriesFragment : Fragment() {
+
+    companion object classInfo {
+        lateinit var list: List<Countries>
+    }
 
     private lateinit var recyclerView: RecyclerView
 
@@ -48,6 +53,7 @@ class CountriesFragment : Fragment() {
                 if (response.isSuccessful) {
                     val countriesList = response.body()
 
+
                     try {
                         val layoutManager = LinearLayoutManager(requireContext())
                         layoutManager.orientation = LinearLayoutManager.VERTICAL
@@ -56,6 +62,11 @@ class CountriesFragment : Fragment() {
                         // sorting the list
                         val sortedList =
                             countriesList?.sortedWith(compareByDescending({ it.cases }))
+
+                        // list for details activity
+                        if (sortedList != null) {
+                            list = sortedList
+                        }
                         recyclerView.adapter =
                             sortedList?.let { CountriesAdapter(requireContext(), sortedList) }
                     } catch (e: Exception) {
