@@ -4,7 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragments.CountriesFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:textColor="@android:color/white"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/round"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:drawablePadding="8dp"
+                android:focusable="false"
+                android:hint="Search"
+                android:padding="2dp"
+
+                />
+
+
+        </LinearLayout>
+
+
+        
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <!--    </androidx.appcompat.widget.Toolbar>-->
 
 
     <androidx.recyclerview.widget.RecyclerView
